@@ -60,13 +60,11 @@ export function getTargetElement (element: Window | Document | HTMLElement | Ref
 
   // @ts-ignore
   let ele = element.current
-
   if (isHtmlControl(ele)) {
     return ele
   }
 
   ele = findDOMNode(element as ReactInstance)
-
   if (isHtmlControl(ele)) {
     return ele
   }
@@ -75,11 +73,15 @@ export function getTargetElement (element: Window | Document | HTMLElement | Ref
 }
 
 function isHtmlControl (obj: any): boolean {
-  const div = document.createElement("div");
+  if (obj === window || obj === document) {
+    return true
+  }
+
+  const div = document.createElement("div")
   try {
-    div.appendChild(obj.cloneNode(true));
+    div.appendChild(obj.cloneNode(true))
     return +obj.nodeType === 1
   } catch (e) {
-    return obj === window || obj === document;
+    return false
   }
 }

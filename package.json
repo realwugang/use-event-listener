@@ -1,0 +1,47 @@
+{
+  "name": "@hooooks/use-event-listener",
+  "version": "0.0.2",
+  "description": "A custom React Hook that provides a useEventListener",
+  "author": "吴刚 <realwugang@gmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib/",
+    "esm/"
+  ],
+  "keywords": [
+    "react-hooks",
+    "hooks",
+    "react",
+    "utils",
+    "lib",
+    "event-listener",
+    "addEventListener",
+    "removeEventListener"
+  ],
+  "url": "https://github.com/realwugang/use-event-listener.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realwugang/use-event-listener.git"
+  },
+  "scripts": {
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "typescript": "^4.6.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

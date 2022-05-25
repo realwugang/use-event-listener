@@ -64,7 +64,7 @@ export function getTargetElement (element: Window | Document | HTMLElement | Ref
     return ele
   }
 
-  ele = findDOMNode(element as ReactInstance)
+  ele = findDOMNode(ele as ReactInstance)
   if (isHtmlControl(ele)) {
     return ele
   }

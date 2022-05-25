@@ -1,6 +1,6 @@
 {
   "name": "@hooooks/use-event-listener",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A custom React Hook that provides a useEventListener",
   "author": "吴刚 <realwugang@gmail.com>",
   "license": "MIT",

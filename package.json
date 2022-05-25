@@ -1,6 +1,6 @@
 {
   "name": "@hooooks/use-event-listener",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A custom React Hook that provides a useEventListener",
   "author": "吴刚 <realwugang@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,15 @@
     "lib",
     "event-listener",
     "addEventListener",
-    "removeEventListener"
+    "removeEventListener",
+    "useRef",
+    "ref",
+    "HTMLElement",
+    "ReactInstance",
+    "event",
+    "capture",
+    "ref.current",
+    "useHook"
   ],
   "url": "https://github.com/realwugang/use-event-listener.git",
   "repository": {

@@ -44,8 +44,8 @@ function App () {
     console.log('contextmenu')
   })
 
-  useEventListener(scrollContentRef, 'touchstart', () => {
-    console.log('touchstart')
+  useEventListener(scrollContentRef, 'scroll', () => {
+    console.log('scroll')
   }, {
     passive: true
   })

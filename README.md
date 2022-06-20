@@ -1,6 +1,8 @@
 # @hooooks/use-event-listener
 
-A custom React Hook that provides a declarative useEventListener.
+A custom React Hook that provides a declarative useEventListener with native event binding.
+
+原生事件绑定hook
 
 ## Installation
 
@@ -28,7 +30,7 @@ useEventListener(element, eventName, handler, options);
 import { useRef } from 'react'
 import useEventListener from '@hooooks/use-event-listener'
 
-function App () {
+function App ({ children }) {
   const containerRef = useRef<HTMLElement>()
   const scrollContentRef = useRef<HTMLElement>()
 
@@ -40,20 +42,25 @@ function App () {
     console.log('hidden', hidden)
   }, false)
 
+  // Component Ref
   useEventListener(containerRef, 'contextmenu', () => {
     console.log('contextmenu')
   })
 
+ // native event binding
   useEventListener(scrollContentRef, 'scroll', () => {
+    // handle scroll
     console.log('scroll')
   }, {
     passive: true
   })
 
   return (
-    <div className='container' ref={containerRef}>
-      <div className='content' ref={scrollContentRef}></div>
-    </div>
+    <Container ref={containerRef}>
+      <div className='content' ref={scrollContentRef}>
+        {children}
+      </div>
+    </Container>
   )
 }
 ```

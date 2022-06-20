@@ -1,7 +1,7 @@
 {
   "name": "@hooooks/use-event-listener",
-  "version": "0.0.6",
-  "description": "A custom React Hook that provides a useEventListener",
+  "version": "1.0.0",
+  "description": "A custom React Hook that provides a declarative useEventListener with native event binding.",
   "author": "吴刚 <realwugang@gmail.com>",
   "license": "MIT",
   "main": "lib/index.js",
@@ -28,7 +28,11 @@
     "event",
     "capture",
     "ref.current",
-    "useHook"
+    "useHook",
+    "native",
+    "native event",
+    "原生事件",
+    "事件绑定"
   ],
   "url": "https://github.com/realwugang/use-event-listener.git",
   "repository": {
